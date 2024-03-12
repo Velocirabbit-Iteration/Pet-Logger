@@ -19,9 +19,13 @@ sessionController.isLoggedIn = async (req, res, next) => {
     const session = await Session.findOne({ cookieId: ssid });
 
     if (session) {
+      res.locals.sessionBoolean = true;
+      res.locals.status = 200;
       return next();
     } else {
-      return res.redirect('/#/signup');
+      res.locals.sessionBoolean = false;
+      res.locals.status = 401;
+      return next();
     }
   } catch (error) {
     return next({
@@ -36,15 +40,12 @@ sessionController.isLoggedIn = async (req, res, next) => {
  * startSession - create and save a new Session into the database.
  */
 sessionController.startSession = async (req, res, next) => {
-  //write code here
+  const _id = res.locals._id.toString();
   try {
-    if (!res.locals.createResult || !res.locals.createResult._id) {
+    if (!_id) {
       throw new Error('No user id found for session');
     }
-
-    const userId = res.locals.createResult._id.toString();
-    await Session.create({ cookieId: userId });
-
+    await Session.create({ cookieId: _id });
     return next();
   } catch (error) {
     return next({

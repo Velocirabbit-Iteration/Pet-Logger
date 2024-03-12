@@ -26,4 +26,8 @@ router.post(
   }
 );
 
+router.get('/session', sessionController.isLoggedIn, (req, res) => {
+  res.status(res.locals.status).send(res.locals.sessionBoolean);
+});
+
 module.exports = router;
