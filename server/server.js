@@ -1,6 +1,7 @@
 const path = require('path');
 const express = require('express');
 const petLoggerRouter = require('./routers/petLoggerRouter');
+const cookieParser = require('cookie-parser');
 const authRouter = require('./routers/authRouter.js');
 const cors = require('cors');
 
@@ -10,6 +11,7 @@ app.use(cors());
 
 // parsing requests to json
 app.use(express.json());
+app.use(cookieParser());
 // define the route handlers
 app.use('/api', petLoggerRouter);
 app.use('/auth', authRouter);
