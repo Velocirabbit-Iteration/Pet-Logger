@@ -1,6 +1,7 @@
 import React from 'react';
 import cors from 'cors';
 import { useNavigate } from 'react-router-dom';
+import style from '../stylesheets/iterationStyle.css';
 
 const LoginComponent = () => {
   const navigate = useNavigate();
@@ -50,14 +51,16 @@ const LoginComponent = () => {
       <h1>Login / Sign Up</h1>
 
       <form>
-        <input type='text' id='usernameInput' placeholder='username' />
-        <input type='password' id='passwordInput' placeholder='password' />
-        <button type='button' onClick={(e) => handleLogin(e)}>
-          Log In
-        </button>
-        <button type='button' onClick={(e) => handleSignUp(e)}>
-          Sign Up
-        </button>
+        <div class>
+          <input type='text' id='usernameInput' placeholder='username' />
+          <input type='password' id='passwordInput' placeholder='password' />
+          <button type='button' onClick={(e) => handleLogin(e)}>
+            Log In
+          </button>
+          <button type='button' onClick={(e) => handleSignUp(e)}>
+            Sign Up
+          </button>
+        </div>
       </form>
     </>
   );
