@@ -4,8 +4,9 @@ import NewLogComponent from "../components/NewLogComponent";
 import LogComponent from "../components/LogComponent";
 
 import DependentComponent from "../components/DependentComponent";
+import CalendarComponent from "../components/CalendarComponent";
 import { useParams } from "react-router-dom";
-
+import style from '../stylesheets/iterationStyle.css'
 const logArray = [{activity:'nap', time:'12:50pm', note: 'Did not want to take a nap.'}, {activity:'medicine', time:'1:50pm', note: 'Gave red pills' }]; 
 
 const DependentContainer = (props) => {
@@ -39,7 +40,9 @@ const DependentContainer = (props) => {
   // });  
 
     let logActivities = []; 
+    let dates = []
     for (let i = log.length-1; i>=0; i--){
+      dates.push(log[i].date)
       logActivities.push(
         <LogComponent
         key ={i}
@@ -50,14 +53,19 @@ const DependentContainer = (props) => {
 
 
   return (
-    <div className="dependentpagecontainer">
-      {/* <DependentComponent
-        traits={{        }} 
-      ></DependentComponent> */}
-      <NewLogComponent 
-        // resetPage = {setreset}
-      id = {id}></NewLogComponent>
-      {logActivities}
+    <div className="calendarExterior">
+      <div className="dependentpagecontainer">
+        {/* <DependentComponent
+          traits={{        }} 
+        ></DependentComponent> */}
+        <NewLogComponent 
+          // resetPage = {setreset}
+        id = {id}>
+          
+        </NewLogComponent>
+        {logActivities}
+      </div>
+      <CalendarComponent dates = {dates}/>
     </div>
   );
 };
