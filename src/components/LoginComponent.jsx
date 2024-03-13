@@ -3,7 +3,7 @@ import cors from 'cors';
 import { useNavigate } from 'react-router-dom';
 import style from '../stylesheets/iterationStyle.css';
 
-const LoginComponent = () => {
+const LoginComponent = (setcurrentUserId) => {
   const navigate = useNavigate();
 
   function handleLogin(event) {
@@ -55,12 +55,14 @@ const LoginComponent = () => {
           <div className='loginFormContent'>
             <input type='text' id='usernameInput' placeholder='username' />
             <input type='password' id='passwordInput' placeholder='password' />
-            <button type='button' onClick={(e) => handleLogin(e)}>
-              Log In
-            </button>
-            <button type='button' onClick={(e) => handleSignUp(e)}>
-              Sign Up
-            </button>
+            <div className='loginButton'>
+              <button type='button' onClick={(e) => handleLogin(e)}>
+                LOG IN
+              </button>
+              <button type='button' onClick={(e) => handleSignUp(e)}>
+                SIGN UP
+              </button>
+            </div>
           </div>
         </form>
       </div>
