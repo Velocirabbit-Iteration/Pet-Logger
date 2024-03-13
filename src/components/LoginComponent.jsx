@@ -3,7 +3,7 @@ import cors from 'cors';
 import { useNavigate } from 'react-router-dom';
 import style from '../stylesheets/iterationStyle.css';
 
-const LoginComponent = (setcurrentUserId) => {
+const LoginComponent = ({ setCurrentUserId }) => {
   const navigate = useNavigate();
 
   function handleLogin(event) {
@@ -18,12 +18,14 @@ const LoginComponent = (setcurrentUserId) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status == 200) {
-        navigate('/user');
-      }
-    });
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCurrentUserId(data);
+        if (data) navigate('/user');
+      });
   }
 
   function handleSignUp(event) {
@@ -38,12 +40,14 @@ const LoginComponent = (setcurrentUserId) => {
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status == 200) {
-        navigate('/user');
-      }
-    });
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCurrentUserId(data);
+        if (data) navigate('/user');
+      });
   }
 
   return (
