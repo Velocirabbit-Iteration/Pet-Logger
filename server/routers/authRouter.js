@@ -9,8 +9,8 @@ const sessionController = require('../controllers/sessionController');
 router.post(
   '/signup',
   authController.addNewUser,
-  sessionController.startSession,
-  cookieController.setSSIDCookie,
+  // sessionController.startSession,
+  // cookieController.setSSIDCookie,
   (req, res) => {
     return res.status(200).json(res.locals._id);
   }
@@ -19,8 +19,8 @@ router.post(
 router.post(
   '/login',
   authController.compareUser,
-  sessionController.startSession,
-  cookieController.setSSIDCookie,
+  // sessionController.startSession,
+  // cookieController.setSSIDCookie,
   (req, res) => {
     return res.status(200).json(res.locals._id);
   }
