@@ -12,14 +12,15 @@ sessionController.isLoggedIn = async (req, res, next) => {
     const { ssid } = req.cookies;
     // console.log('Checking session', ssid);
 
-    if (!ssid) {
-      return res.redirect('/login');
-    }
+    // if (!ssid) {
+    //   return res.redirect('/login');
+    // }
 
     const session = await Session.findOne({ cookieId: ssid });
 
     if (session) {
       res.locals.sessionBoolean = true;
+      res.locals.userSessionId = ssid;
       res.locals.status = 200;
       return next();
     } else {
