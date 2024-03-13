@@ -67,12 +67,12 @@ petLoggerController.getDogs = async (req, res, next) => {
 petLoggerController.addDog = async (req, res, next) => {
   try {
     // declare the constants we're going to use
-    const { name, breed, age, gender } = req.body;
+    const { name, breed, age, gender, users } = req.body;
     // async connect to the mongo DB, and create a new dog
-    const newDog = await model.Dog.create({ name, breed, age, gender });
+    const newDog = await model.Dog.create({ name, breed, age, gender, users });
     // save the dog object in res.locals as newDog
     res.locals.newDog = newDog;
-    console.log("newDog", res.locals.newDog)
+    console.log('newDog', res.locals.newDog);
     return next();
   } catch (err) {
     // handle errors

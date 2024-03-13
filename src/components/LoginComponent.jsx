@@ -3,56 +3,63 @@ import cors from 'cors';
 import { useNavigate } from 'react-router-dom';
 import style from '../stylesheets/iterationStyle.css';
 
-const LoginComponent = (setcurrentUserId) => {
+const LoginComponent = ({ setCurrentUserId }) => {
   const navigate = useNavigate();
 
   function handleLogin(event) {
     event.preventDefault();
+    const name = document.querySelector('#nameInput').value;
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
     fetch('http://localhost:3000/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ userName, password }),
+      body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status == 200) {
-        navigate('/user');
-      }
-    });
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCurrentUserId(data);
+        if (data) navigate('/user');
+      });
   }
 
   function handleSignUp(event) {
     event.preventDefault();
+    const name = document.querySelector('#nameInput').value;
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
     fetch('http://localhost:3000/auth/signup', {
       method: 'POST',
-      body: JSON.stringify({ userName, password }),
+      body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
       },
-    }).then((response) => {
-      console.log(response.status);
-      if (response.status == 200) {
-        navigate('/user');
-      }
-    });
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setCurrentUserId(data);
+        if (data) navigate('/user');
+      });
   }
 
   return (
     <>
-      <div class='loginForm'>
-        <h1>Login / Sign Up</h1>
+      <div className='loginForm'>
+        <h1>Login or Sign Up</h1>
 
         <form>
           <div className='loginFormContent'>
+            <input type='text' id='nameInput' placeholder='name' />
             <input type='text' id='usernameInput' placeholder='username' />
             <input type='password' id='passwordInput' placeholder='password' />
             <div className='loginButton'>

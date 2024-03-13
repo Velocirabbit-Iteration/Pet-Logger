@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { withRouter } from "react-router-dom";
-import NewLogComponent from "../components/NewLogComponent";
-import LogComponent from "../components/LogComponent";
+import React, { useState, useEffect } from 'react';
+import { withRouter } from 'react-router-dom';
+import NewLogComponent from '../components/NewLogComponent';
+import LogComponent from '../components/LogComponent';
 
 import DependentComponent from "../components/DependentComponent";
 import CalendarComponent from "../components/CalendarComponent";
@@ -18,18 +18,17 @@ const DependentContainer = (props) => {
   // Controller mtehod: getPost
   // Response: array of post objects [{postType, details, date}]
 
-  const [log, setLog] = useState([]); 
+  const [log, setLog] = useState([]);
   // const [reset, setreset] = useState(false)
 
-  useEffect (() => {
-    fetch (`/api/post?dogId=${id}`)
-    .then(resp => resp.json())
-    .then (data => setLog(data)) 
-    .catch((err)=> console.log("get logs request error", err));
-  }, []); 
-   
-  
- // iterate using a for loop over the data array of objects, pass in the info from each element to a dependent component.
+  useEffect(() => {
+    fetch(`/api/post?dogId=${id}`)
+      .then((resp) => resp.json())
+      .then((data) => setLog(data))
+      .catch((err) => console.log('get logs request error', err));
+  }, []);
+
+  // iterate using a for loop over the data array of objects, pass in the info from each element to a dependent component.
 
   // const logActivities = log.map((elem, i)=>{
   //   return (
@@ -37,7 +36,7 @@ const DependentContainer = (props) => {
   //       key ={i}
   //       logs = {elem}
   //     />);
-  // });  
+  // });
 
     let logActivities = []; 
     let dates = []
@@ -50,7 +49,6 @@ const DependentContainer = (props) => {
       />
       )
     }
-
 
   return (
     <div className="calendarExterior">
