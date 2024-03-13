@@ -7,7 +7,7 @@ import DogIcon from './DogIcon';
 const NavComponent = () => {
   return (
     <div className='navheader'>
-      <a className='logo'>
+      <a className='logo' href='/#/user'>
         <DogIcon />
         PetLogger
       </a>
