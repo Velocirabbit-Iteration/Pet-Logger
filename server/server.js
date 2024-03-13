@@ -2,9 +2,11 @@ const path = require('path');
 const express = require('express');
 const petLoggerRouter = require('./routers/petLoggerRouter');
 const authRouter = require('./routers/authRouter.js');
+const cors = require('cors');
 
 const app = express();
 const PORT = 3000;
+app.use(cors());
 
 // parsing requests to json
 app.use(express.json());

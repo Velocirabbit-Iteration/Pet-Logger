@@ -18,14 +18,12 @@ const App = () => {
         <MainContainer />
         <NavComponent />
 
-
         <Routes>
           <Route path='/' element={<LoginComponent />} />
           <Route path='user' element={<UserProfileContainer />} />
           <Route path='dependent/:id' element={<DependentContainer />} />
           <Route path='addnew' element={<AddNewComponent />} />
         </Routes>
-
 
         {/* </MainContainer> */}
       </main>
