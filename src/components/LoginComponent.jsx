@@ -48,20 +48,22 @@ const LoginComponent = () => {
 
   return (
     <>
-      <h1>Login / Sign Up</h1>
+      <div class='loginForm'>
+        <h1>Login / Sign Up</h1>
 
-      <form>
-        <div class>
-          <input type='text' id='usernameInput' placeholder='username' />
-          <input type='password' id='passwordInput' placeholder='password' />
-          <button type='button' onClick={(e) => handleLogin(e)}>
-            Log In
-          </button>
-          <button type='button' onClick={(e) => handleSignUp(e)}>
-            Sign Up
-          </button>
-        </div>
-      </form>
+        <form>
+          <div className='loginFormContent'>
+            <input type='text' id='usernameInput' placeholder='username' />
+            <input type='password' id='passwordInput' placeholder='password' />
+            <button type='button' onClick={(e) => handleLogin(e)}>
+              Log In
+            </button>
+            <button type='button' onClick={(e) => handleSignUp(e)}>
+              Sign Up
+            </button>
+          </div>
+        </form>
+      </div>
     </>
   );
 };
