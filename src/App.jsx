@@ -8,7 +8,7 @@ import AddNewComponent from './components/AddNewComponent';
 import NavComponent from './components/NavComponent';
 import LoginComponent from './components/LoginComponent';
 import { useState } from 'react';
-import CalendarComponent from './components/CalendarComponent';
+
 const App = () => {
   const [currentUserId, setCurrentUserId] = useState(
     '65ecbe30d6da6de8222431e2'
@@ -17,22 +17,24 @@ const App = () => {
   // const [currentUserId, setCurrentUserId] = useState('');
   const navigate = useNavigate();
 
-  useEffect(() => {
-    fetch('/auth/session')
-      .then((response) => response.json())
-      .then((data) => {
-        if (!data.userLoggedIn) {
-          navigate('/');
-        } else {
-          setCurrentUserId(data._id);
-          navigate('/user');
-        }
-      })
-      .catch((error) => {
-        console.error('Error checking session:', error);
-        navigate('/');
-      });
-  }, [navigate]);
+  // useEffect(() => {
+  //   fetch('/auth/session')
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       console.log('Response data from server', data);
+  //       if (!data.userLoggedIn) {
+  //         console.log('This is data', data.userLoggedIn);
+  //         navigate('/');
+  //       } else {
+  //         setCurrentUserId(data._id);
+  //         navigate('/user');
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error checking session:', error);
+  //       navigate('/');
+  //     });
+  // }, [navigate]);
 
   return (
     <div>
