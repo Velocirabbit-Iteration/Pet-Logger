@@ -8,12 +8,13 @@ const LoginComponent = (setcurrentUserId) => {
 
   function handleLogin(event) {
     event.preventDefault();
+    const name = document.querySelector('#nameInput').value;
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
     fetch('http://localhost:3000/auth/login', {
       method: 'POST',
-      body: JSON.stringify({ userName, password }),
+      body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
@@ -28,12 +29,13 @@ const LoginComponent = (setcurrentUserId) => {
 
   function handleSignUp(event) {
     event.preventDefault();
+    const name = document.querySelector('#nameInput').value;
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
     fetch('http://localhost:3000/auth/signup', {
       method: 'POST',
-      body: JSON.stringify({ userName, password }),
+      body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json',
@@ -48,11 +50,12 @@ const LoginComponent = (setcurrentUserId) => {
 
   return (
     <>
-      <div class='loginForm'>
-        <h1>Login / Sign Up</h1>
+      <div className='loginForm'>
+        <h1>Login or Sign Up</h1>
 
         <form>
           <div className='loginFormContent'>
+            <input type='text' id='nameInput' placeholder='name' />
             <input type='text' id='usernameInput' placeholder='username' />
             <input type='password' id='passwordInput' placeholder='password' />
             <div className='loginButton'>
