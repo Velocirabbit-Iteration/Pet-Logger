@@ -2,12 +2,7 @@ const Session = require('../models/sessionModel');
 
 const sessionController = {};
 
-/**
- * isLoggedIn - find the appropriate session for this request in the database, then
- * verify whether or not the session is still valid.
- */
 sessionController.isLoggedIn = async (req, res, next) => {
-  // write code here
   try {
     const { ssid } = req.cookies;
     // console.log('Checking session', ssid);
@@ -37,9 +32,6 @@ sessionController.isLoggedIn = async (req, res, next) => {
   }
 };
 
-/**
- * startSession - create and save a new Session into the database.
- */
 sessionController.startSession = async (req, res, next) => {
   const _id = res.locals._id;
   try {
