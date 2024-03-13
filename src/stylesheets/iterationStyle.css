@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
+
+body {
+  background: whitesmoke;
+  font-family: Arial, Arial, Helvetica, sans-serif;
+  color: rgb(0, 162, 255);
+}
+
+.loginFormContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.loginForm {
+  width: 40%;
+  margin: auto;
+  margin-top: 50px;
+  /* remove this later */
+  /* border: 1px solid black; */
+}
+
+.loginForm input {
+  width: 80%;
+  margin-top: 20px;
+  height: 40px;
+  padding: 0px 10px;
+}
+
+.loginButton {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+.loginButton button {
+  font-size: 1rem;
+  background-color: rgb(0, 162, 255);
+  border-radius: 50px;
+  border: none;
+  color: rgb(255, 255, 255);
+  width: 30%;
+  height: 2rem;
+  margin: 1rem;
+}
