@@ -12,7 +12,7 @@ router.post(
   sessionController.startSession,
   cookieController.setSSIDCookie,
   (req, res) => {
-    return res.status(200).send(res.locals.createResult);
+    return res.status(200).send('Sign up successful!');
   }
 );
 
@@ -27,7 +27,9 @@ router.post(
 );
 
 router.get('/session', sessionController.isLoggedIn, (req, res) => {
-  res.status(res.locals.status).send(res.locals.sessionBoolean);
+  res
+    .status(res.locals.status)
+    .json({ userLoggedIn: res.locals.sessionBoolean });
 });
 
 module.exports = router;
