@@ -15,19 +15,22 @@ const App = () => {
   );
 
   // const [currentUserId, setCurrentUserId] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const navigate = useNavigate();
-
     fetch('/auth/session')
       .then((response) => response.json())
       .then((data) => {
         if (!data.userLoggedIn) {
           navigate('/');
         } else {
-          setCurrentUserId = data._id;
+          setCurrentUserId(data._id);
           navigate('/user');
         }
+      })
+      .catch((error) => {
+        console.error('Error checking session:', error);
+        navigate('/');
       });
   }, [navigate]);
 
