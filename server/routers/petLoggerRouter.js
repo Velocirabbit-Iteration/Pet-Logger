@@ -2,7 +2,7 @@
 const express = require('express');
 const router = express.Router();
 
-// import our relevante controllers
+// import our relevant controllers
 const petLoggerController = require('../controllers/petLoggerController');
 /* WHAT IS THIS FILE DOING?
   use the controllers based on what kind of a request is coming in
@@ -34,7 +34,7 @@ router.get('/dog/:user', petLoggerController.getDogs, (req, res) => {
 // Get a dog's posts
 // Method: GET
 // Endpoint: localhost:3000/api/post (query: dogId)
-// Controller mtehod: getPost
+// Controller method: getPost
 // Response: array of post objects [{postType, details, date}]
 router.get('/post', petLoggerController.getPost, (req, res) => {
   res.status(200).json(res.locals.posts);

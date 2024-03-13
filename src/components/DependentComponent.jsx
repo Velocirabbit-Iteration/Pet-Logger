@@ -26,7 +26,8 @@ const DependentComponent = ({ traits }) => {
       </div>
       <div className="dependentinfocontainer">
         <h3 className="dependentname">
-          <Link to={'/dependent/' + _id}>{name}</Link>
+          {/* <Link to={'/dependent/' + _id}>{name}</Link> */}
+          {name}
         </h3>
         <ul className="dependenttraits">
           <li className="traitslist">Age: {age}</li>

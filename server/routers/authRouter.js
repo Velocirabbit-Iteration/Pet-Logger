@@ -6,6 +6,7 @@ const authController = require('../controllers/authController');
 const cookieController = require('../controllers/cookieController');
 const sessionController = require('../controllers/sessionController');
 
+
 router.post(
   '/signup',
   authController.addNewUser,
