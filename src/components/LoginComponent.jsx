@@ -12,7 +12,7 @@ const LoginComponent = ({ setCurrentUserId }) => {
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
-    fetch('http://localhost:3000/auth/login', {
+    fetch('/auth/login', {
       method: 'POST',
       body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
@@ -35,7 +35,7 @@ const LoginComponent = ({ setCurrentUserId }) => {
     const userName = document.querySelector('#usernameInput').value;
     const password = document.querySelector('#passwordInput').value;
 
-    fetch('http://localhost:3000/auth/signup', {
+    fetch('/auth/signup', {
       method: 'POST',
       body: JSON.stringify({ name, userName, password }),
       mode: 'cors',
@@ -54,19 +54,19 @@ const LoginComponent = ({ setCurrentUserId }) => {
 
   return (
     <>
-      <div className='loginForm'>
+      <div className="loginForm">
         <h1>Login or Sign Up</h1>
 
         <form>
-          <div className='loginFormContent'>
-            <input type='text' id='nameInput' placeholder='name' />
-            <input type='text' id='usernameInput' placeholder='username' />
-            <input type='password' id='passwordInput' placeholder='password' />
-            <div className='loginButton'>
-              <button type='button' onClick={(e) => handleLogin(e)}>
+          <div className="loginFormContent">
+            <input type="text" id="nameInput" placeholder="name" />
+            <input type="text" id="usernameInput" placeholder="username" />
+            <input type="password" id="passwordInput" placeholder="password" />
+            <div className="loginButton">
+              <button type="button" onClick={(e) => handleLogin(e)}>
                 LOG IN
               </button>
-              <button type='button' onClick={(e) => handleSignUp(e)}>
+              <button type="button" onClick={(e) => handleSignUp(e)}>
                 SIGN UP
               </button>
             </div>
