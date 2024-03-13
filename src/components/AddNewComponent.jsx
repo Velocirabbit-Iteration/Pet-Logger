@@ -21,12 +21,13 @@ const useInput = (init) => {
   return [value, onChange];
 };
 
-const AddNewComponent = () => {
+const AddNewComponent = ({ currentUserId }) => {
   const breedlist = [
-    { label: "German Shepard", value: "German Shepard" },
-    { label: "Lab", value: "Lab" },
-    { label: "Husky", value: "Husky" },
-    { label: "Dalmatian", value: "Dalmatian" },
+    { label: 'German Shepard', value: 'German Shepard' },
+    { label: 'Lab', value: 'Lab' },
+    { label: 'Husky', value: 'Husky' },
+    { label: 'Dalmatian', value: 'Dalmatian' },
+    { label: 'Shih Tzu', value: 'Shih Tzu' },
   ];
 
   const genderList = [
