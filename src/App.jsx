@@ -16,9 +16,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <p>Michael was up in here!</p>
-      <p>This is Reem</p>
-      <p>Hello Guys Bongi</p> */}
       <main>
         <MainContainer />
         <NavComponent />
