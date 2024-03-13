@@ -6,14 +6,13 @@ const authController = require('../controllers/authController');
 const cookieController = require('../controllers/cookieController');
 const sessionController = require('../controllers/sessionController');
 
-
 router.post(
   '/signup',
   authController.addNewUser,
   sessionController.startSession,
   cookieController.setSSIDCookie,
   (req, res) => {
-    return res.status(200).send('Sign up successful!');
+    return res.status(200).json(res.locals._id);
   }
 );
 
@@ -23,7 +22,7 @@ router.post(
   sessionController.startSession,
   cookieController.setSSIDCookie,
   (req, res) => {
-    return res.status(200).send();
+    return res.status(200).json(res.locals._id);
   }
 );
 

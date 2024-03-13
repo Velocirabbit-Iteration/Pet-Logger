@@ -10,7 +10,7 @@ import LoginComponent from './components/LoginComponent';
 import { useState } from 'react';
 
 const App = () => {
-  const [currentUserId, setcurrentUserId] = useState(
+  const [currentUserId, setCurrentUserId] = useState(
     '65ecbe30d6da6de8222431e2'
   );
 
@@ -26,11 +26,17 @@ const App = () => {
         <Routes>
           <Route
             path='/'
-            element={<LoginComponent setcurrentUserId={setcurrentUserId} />}
+            element={<LoginComponent setCurrentUserId={setCurrentUserId} />}
           />
-          <Route path='user' element={<UserProfileContainer />} />
+          <Route
+            path='user'
+            element={<UserProfileContainer currentUserId={currentUserId} />}
+          />
           <Route path='dependent/:id' element={<DependentContainer />} />
-          <Route path='addnew' element={<AddNewComponent />} />
+          <Route
+            path='addnew'
+            element={<AddNewComponent currentUserId={currentUserId} />}
+          />
         </Routes>
 
         {/* </MainContainer> */}
