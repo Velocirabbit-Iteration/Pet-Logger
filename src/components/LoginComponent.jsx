@@ -48,7 +48,7 @@ const LoginComponent = (setcurrentUserId) => {
 
   return (
     <>
-      <div class='loginForm'>
+      <div className='loginForm'>
         <h1>Login / Sign Up</h1>
 
         <form>
