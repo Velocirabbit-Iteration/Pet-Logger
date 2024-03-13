@@ -5,11 +5,11 @@ const bcrypt = require('bcryptjs');
 const authController = require('../controllers/authController');
 
 router.post('/signup', authController.addNewUser, (req, res) => {
-  return res.status(200).send(res.locals.createResult);
+  return res.status(200).redirect('/#/user');
 });
 
 router.post('/login', authController.compareUser, (req, res) => {
-  return res.status(200).send();
+  return res.status(200).redirect('/#/user');
 });
 
 module.exports = router;
