@@ -15,7 +15,8 @@ authController.addNewUser = (req, res, next) => {
   User.create({ name, userName, password })
     .then((result) => {
       console.log('new user created');
-      res.locals.createResult = result;
+
+      res.locals._id = result._id.toString();
       return next();
     })
     .catch((error) => {
@@ -39,6 +40,7 @@ authController.compareUser = (req, res, next) => {
   }
   User.findOne({ userName })
     .then((data) => {
+      res.locals._id = data._id.toString();
       bcrypt
         .compare(password, data.password)
         .then((matchBoolean) => {
