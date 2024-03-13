@@ -13,7 +13,7 @@ sessionController.isLoggedIn = async (req, res, next) => {
     // console.log('Checking session', ssid);
 
     if (!ssid) {
-      return res.redirect('/signup');
+      return res.redirect('/login');
     }
 
     const session = await Session.findOne({ cookieId: ssid });
@@ -40,7 +40,7 @@ sessionController.isLoggedIn = async (req, res, next) => {
  * startSession - create and save a new Session into the database.
  */
 sessionController.startSession = async (req, res, next) => {
-  const _id = res.locals._id.toString();
+  const _id = res.locals._id;
   try {
     if (!_id) {
       throw new Error('No user id found for session');

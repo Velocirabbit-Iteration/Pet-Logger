@@ -4,7 +4,7 @@ const cookieController = {};
 cookieController.setSSIDCookie = (req, res, next) => {
   console.log('cookieController 1');
   console.log('cookieController 2');
-  const id = res.locals._id.toString();
+  const id = res.locals._id;
   try {
     if (id) {
       res.cookie('ssid', id, { httpOnly: true });
