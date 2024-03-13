@@ -13,6 +13,8 @@ const DependentComponent = ({ traits }) => {
     Husky: 'https://images.pexels.com/photos/245035/pexels-photo-245035.jpeg',
     Dalmatian:
       'https://images.pexels.com/photos/13764529/pexels-photo-13764529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+    'Shih Tzu':
+      'https://pawleaks.com/wp-content/uploads/2021/05/Shih-Tzu-Poodle-mix.jpg',
   };
 
   const { _id, name, age, breed, gender } = traits;
