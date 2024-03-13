@@ -41,7 +41,7 @@ const DependentContainer = (props) => {
     let logActivities = []; 
     let dates = []
     for (let i = log.length-1; i>=0; i--){
-      dates.push(log[i].date)
+      dates.push(log[i].date);
       logActivities.push(
         <LogComponent
         key ={i}
