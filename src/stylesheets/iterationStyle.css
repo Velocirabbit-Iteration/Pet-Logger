@@ -55,9 +55,30 @@ h1 {
   margin: 1rem;
 }
 
+.calendarExterior{
+  display: flex;
+  padding: 10px;
+  gap:200px;
+}
+
+.react-calendar .highlight::after {
+  /* outline: 2px solid red;  */
+  position: relative;
+  
+  content: '•'; 
+  color: red;
+  font-size: 20px;
+  border-radius: 5%;
+  top:16px;
+  right:9px;
+  /* background-color: red;  */
+} 
+
+
 button:active {
   background-color: rgb(255, 255, 255);
   border: 2px solid;
   border-color: rgb(0, 162, 255);
   color: rgb(0, 162, 255);
 }
+

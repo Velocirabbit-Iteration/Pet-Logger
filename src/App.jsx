@@ -8,7 +8,7 @@ import AddNewComponent from './components/AddNewComponent';
 import NavComponent from './components/NavComponent';
 import LoginComponent from './components/LoginComponent';
 import { useState } from 'react';
-
+import CalendarComponent from './components/CalendarComponent';
 const App = () => {
   const [currentUserId, setCurrentUserId] = useState(
     '65ecbe30d6da6de8222431e2'

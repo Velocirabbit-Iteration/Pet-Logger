@@ -18,6 +18,7 @@ const LogComponent = ({ logs }) => {
         <span className="details">{details}</span>
         <span className="time">{`${formatDate} at ${formatTime}`}</span>
       </div>
+      
     </div>
   );
 };

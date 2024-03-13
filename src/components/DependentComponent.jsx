@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 // import DependentContainer from './DependentContainer';
 
 // to add link to the dependent page
@@ -21,15 +20,16 @@ const DependentComponent = ({ traits }) => {
   console.log({ breed });
 
   return (
-    <div className='dependentcomponent'>
-      <div className='dependentimgcontainer'>
+
+    
+    <div className="dependentcomponent">
+      <div className="dependentimgcontainer">
         {/* <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg"></img> */}
         <img src={dogImages[breed]} style={{ objectFit: 'cover' }}></img>
       </div>
-      <div className='dependentinfocontainer'>
-        <h3 className='dependentname'>
-          {/* <Link to={'/dependent/' + _id}>{name}</Link> */}
-          {name}
+      <div className="dependentinfocontainer">
+        <h3 className="dependentname">
+          <Link to={'/dependent/' + _id}>{name}</Link>
         </h3>
         <ul className='dependenttraits'>
           <li className='traitslist'>Age: {age}</li>
@@ -38,6 +38,7 @@ const DependentComponent = ({ traits }) => {
         </ul>
       </div>
     </div>
+ 
   );
 };
 
