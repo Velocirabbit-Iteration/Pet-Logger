@@ -17,12 +17,18 @@ module.exports = {
     static: {
       directory: path.resolve(__dirname, 'dist'),
     },
-    proxy: [
-      {
-        context: ['/api/**', '/auth/**'],
+    proxy: {
+      '/api/**': {
         target: 'http://localhost:3000/',
+        secure: false,
+        changeOrigin: true,
       },
-    ],
+      '/auth/**': {
+        target: 'http://localhost:3000/',
+        secure: false,
+        changeOrigin: true,
+      },
+    },
   },
 
   plugins: [
