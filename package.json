@@ -7,7 +7,9 @@
     "start": "NODE_ENV=production nodemon server/server.js",
     "build": "webpack --mode production",
     "dev": "NODE_ENV=development nodemon server/server.js & NODE_ENV=development webpack serve --open",
-    "test": "jest --verbose"
+    "test": "jest --verbose",
+    "predeploy": "npm run build",
+    "deploy": "NODE_ENV=production gh-pages -d dist"
   },
   "keywords": [],
   "author": "",
@@ -28,6 +30,7 @@
     "cors": "^2.8.5",
     "date-fns": "^3.4.0",
     "dotenv": "^16.4.5",
+    "gh-pages": "^6.1.1",
     "mongodb": "^6.4.0",
     "mongoose": "^8.2.1",
     "nodemon": "^3.1.0",

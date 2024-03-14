@@ -22,6 +22,7 @@ const UserProfileContainer = ({ currentUserId }) => {
   // console.log("dependents", dependents)
 
   const dependents = result.map((elem, i) => {
+    console.log(elem);
     return <DependentComponent key={i} traits={elem} />;
   });
 
