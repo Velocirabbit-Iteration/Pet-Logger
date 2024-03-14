@@ -12,7 +12,7 @@ const UserProfileContainer = ({ currentUserId }) => {
   // default id: 65ecbe30d6da6de8222431e2
 
   useEffect(() => {
-    fetch(`/api/dog/${currentUserId}`)
+    fetch(`http://192.168.0.226:3000/api/dog/${currentUserId}`)
       .then((resp) => resp.json())
       .then((data) => setResult(data)) // data is going to be an array of objects
       .catch((err) => console.log('get dependents request error', err));

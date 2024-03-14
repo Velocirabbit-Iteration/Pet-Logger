@@ -25,7 +25,7 @@ const DependentContainer = (props) => {
   // const [reset, setreset] = useState(false)
 
   useEffect(() => {
-    fetch(`/api/post?dogId=${id}`)
+    fetch(`http://192.168.0.226:3000/api/post?dogId=${id}`)
       .then((resp) => resp.json())
       .then((data) => setLog(data))
       .catch((err) => console.log('get logs request error', err));

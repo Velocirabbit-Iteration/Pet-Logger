@@ -27,7 +27,7 @@ const App = () => {
       setCurrentUserId(storedUserId);
       navigate('/user');
     } else {
-      fetch('/auth/session')
+      fetch('http://192.168.0.226:3000/auth/session')
         .then((response) => response.json())
         .then((data) => {
           if (data.userLoggedIn) {

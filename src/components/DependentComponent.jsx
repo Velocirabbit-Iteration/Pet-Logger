@@ -27,7 +27,7 @@ const DependentComponent = ({ traits }) => {
       )
     ) {
       try {
-        await fetch('http://localhost:3000/api/dog', {
+        await fetch('http://192.168.0.226:3000/api/dog', {
           method: 'DELETE',
           mode: 'cors',
           headers: { 'Content-Type': 'application/json' },

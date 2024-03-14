@@ -51,7 +51,7 @@ const AddNewComponent = ({ currentUserId }) => {
     };
     console.log('req.body', body);
 
-    fetch('/api/dog', {
+    fetch('http://192.168.0.226:3000/api/dog', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/JSON',

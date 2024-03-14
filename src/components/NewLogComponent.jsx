@@ -21,7 +21,7 @@ const NewLogComponent = (props) => {
       postType,
       details,
     };
-    fetch('/api/post', {
+    fetch('http://192.168.0.226:3000/api/post', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/JSON',
