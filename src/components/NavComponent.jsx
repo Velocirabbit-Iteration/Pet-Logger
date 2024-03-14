@@ -11,20 +11,19 @@ const NavComponent = ({ currentUserId }) => {
   // function handleLogout (event) => {
 
   // };
-  useEffect (() => {
-    function checkSession () {
+  useEffect(() => {
+    function checkSession() {
       if (currentUserId) {
         return 'Log Out';
-      };
+      }
     }
   });
-  
 
   return (
     <div className='navheader'>
       <a className='logo' href='/#/user'>
         <DogIcon />
-        PetLogger
+        PetLogger 2.0
       </a>
 
       <nav className=' navbar'>
