@@ -24,7 +24,7 @@ const CalendarComponent = ({ dates }) => {
   // console.log(testDates)
   const newDates = [];
   dates.forEach((date) => newDates.push(date.split('T')[0]));
-  console.log(newDates);
+  // console.log(newDates);
   // const dateMatch = (date) => {
   //   const formatDate = date.toISOString().split('T')[0];
   //   return matchDates.includes(formatDate);

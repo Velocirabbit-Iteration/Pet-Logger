@@ -14,7 +14,7 @@ authController.addNewUser = (req, res, next) => {
   }
   User.create({ name, userName, password })
     .then((result) => {
-      console.log('new user created');
+      // console.log('new user created');
 
       res.locals._id = result._id.toString();
       return next();

@@ -49,7 +49,7 @@ const AddNewComponent = ({ currentUserId }) => {
       gender,
       users: [currentUserId],
     };
-    console.log('req.body', body);
+    // console.log('req.body', body);
 
     fetch('/api/dog', {
       method: 'POST',

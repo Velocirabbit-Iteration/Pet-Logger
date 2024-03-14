@@ -14,7 +14,7 @@ const logArray = [
 
 const DependentContainer = (props) => {
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   // Method: GET
   // Endpoint: localhost:3000/api/post?dogId=48374837483743 (query dogId)

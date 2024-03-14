@@ -72,7 +72,7 @@ petLoggerController.addDog = async (req, res, next) => {
     const newDog = await model.Dog.create({ name, breed, age, gender, users });
     // save the dog object in res.locals as newDog
     res.locals.newDog = newDog;
-    console.log('newDog', res.locals.newDog);
+    // console.log('newDog', res.locals.newDog);
     return next();
   } catch (err) {
     // handle errors
@@ -88,10 +88,10 @@ petLoggerController.deleteDog = async (req, res, next) => {
   const { _id } = req.body;
   try {
     const deleted = await model.Dog.findByIdAndDelete({ _id });
-    console.log('deleted', deleted);
+    // console.log('deleted', deleted);
     return next();
   } catch (error) {
-    console.log('error in deleteDog');
+    // console.log('error in deleteDog');
     return next(error);
   }
 };
@@ -144,7 +144,7 @@ petLoggerController.getPost = async (req, res, next) => {
   try {
     const { dogId } = req.query;
     const foundDog = await model.Dog.find({ _id: dogId });
-    console.log(foundDog[0].posts);
+    // console.log(foundDog[0].posts);
     res.locals.posts = foundDog[0].posts;
 
     return next();

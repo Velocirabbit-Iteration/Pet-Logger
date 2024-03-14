@@ -21,7 +21,7 @@ sessionController.isLoggedIn = async (req, res, next) => {
       res.locals.userSessionId = ssid;
       res.locals.status = 200;
       res.locals.sessionBoolean = true;
-      console.log(res.locals);
+      // console.log(res.locals);
       return next();
     } else {
       res.locals.sessionBoolean = false;

@@ -2,8 +2,8 @@ const User = require('../models/petLoggerModels.js');
 const cookieController = {};
 
 cookieController.setSSIDCookie = (req, res, next) => {
-  console.log('cookieController 1');
-  console.log('cookieController 2');
+  // console.log('cookieController 1');
+  // console.log('cookieController 2');
   const id = res.locals._id;
   try {
     if (id) {
