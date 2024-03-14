@@ -55,25 +55,24 @@ h1 {
   margin: 1rem;
 }
 
-.calendarExterior{
+/* .calendarExterior {
   display: flex;
   padding: 10px;
-  gap:200px;
-}
+  gap: 200px;
+} */
 
 .react-calendar .highlight::after {
   /* outline: 2px solid red;  */
   position: relative;
-  
-  content: '•'; 
+
+  content: '•';
   color: red;
   font-size: 20px;
   border-radius: 5%;
-  top:16px;
-  right:9px;
+  top: 16px;
+  right: 9px;
   /* background-color: red;  */
-} 
-
+}
 
 button:active {
   background-color: rgb(255, 255, 255);
@@ -82,3 +81,12 @@ button:active {
   color: rgb(0, 162, 255);
 }
 
+div.react-calendar {
+  width: 100%;
+  height: auto;
+}
+
+div.dependentpagecontainer {
+  display: flex;
+  flex-direction: row;
+}
