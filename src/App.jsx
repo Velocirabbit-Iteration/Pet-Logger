@@ -51,20 +51,20 @@ const App = () => {
     <div>
       <main>
         <MainContainer />
-        <NavComponent />
+        <NavComponent currentUserId={currentUserId} />
 
         <Routes>
           <Route
-            path="/"
+            path='/'
             element={<LoginComponent setCurrentUserId={setCurrentUserId} />}
           />
           <Route
-            path="user"
+            path='user'
             element={<UserProfileContainer currentUserId={currentUserId} />}
           />
-          <Route path="dependent/:id" element={<DependentContainer />} />
+          <Route path='dependent/:id' element={<DependentContainer />} />
           <Route
-            path="addnew"
+            path='addnew'
             element={<AddNewComponent currentUserId={currentUserId} />}
           />
         </Routes>
