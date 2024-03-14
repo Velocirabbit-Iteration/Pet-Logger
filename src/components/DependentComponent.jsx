@@ -22,19 +22,22 @@ const DependentComponent = ({ traits }) => {
 
   return (
     <div className='dependentcomponent'>
-      <div className='dependentimgcontainer'>
-        <img src={dogImages[breed]} style={{ objectFit: 'cover' }}></img>
+      <div className='dependent-leftside'>
+        <div className='dependentimgcontainer'>
+          <img src={dogImages[breed]} style={{ objectFit: 'cover' }}></img>
+        </div>
+        <div className='dependentinfocontainer'>
+          <h3 className='dependentname'>
+            <Link to={'/dependent/' + _id}>{name}</Link>
+          </h3>
+          <ul className='dependenttraits'>
+            <li className='traitslist'>Age: {age}</li>
+            <li className='traitslist'>Breed: {breed}</li>
+            <li className='traitslist'>Gender: {gender}</li>
+          </ul>
+        </div>
       </div>
-      <div className='dependentinfocontainer'>
-        <h3 className='dependentname'>
-          <Link to={'/dependent/' + _id}>{name}</Link>
-        </h3>
-        <ul className='dependenttraits'>
-          <li className='traitslist'>Age: {age}</li>
-          <li className='traitslist'>Breed: {breed}</li>
-          <li className='traitslist'>Gender: {gender}</li>
-        </ul>
-      </div>
+      <button>&#10005;</button>
     </div>
   );
 };

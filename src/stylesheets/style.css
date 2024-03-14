@@ -1,346 +1,319 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&display=swap');
 
 * {
-    margin: 0; 
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    background: whitesmoke;
+  background: whitesmoke;
 }
 
 .navheader {
-    width: 100%;
-    padding: 10px 20px;
-    background: rgba(0, 145, 255, 0.69);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+  background: rgba(0, 145, 255, 0.69);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    font-size: 1.5rem;
-    color: whitesmoke; 
-    text-decoration: none;
-    font-family: "Madimi One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-
+  font-size: 1.5rem;
+  color: whitesmoke;
+  text-decoration: none;
+  font-family: 'Madimi One', sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
-.logo svg{
-    color: whitesmoke; 
-    
+.logo svg {
+  color: whitesmoke;
 }
 
-
-.navbar{
-    display: flex; 
-    align-items: center;
-    justify-content: space-between;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .profileinfocontainer {
-    background: rgba(0, 145, 255, 0.69);
-    padding: 5px 10px;
-    color: whitesmoke; 
-    border: solid  rgba(0, 145, 255, 0.69);;
-    border-radius: 5px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: rgba(0, 145, 255, 0.69);
+  padding: 5px 10px;
+  color: whitesmoke;
+  border: solid rgba(0, 145, 255, 0.69);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.profileinfocontainer img{
-    height: 30px;
-    width: 30px;
-    border-radius: 50%; 
-    margin-right: 0px;
-
+.profileinfocontainer img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 0px;
 }
 
 .profileinfocontainer span {
-    margin-left: 10px;
-
+  margin-left: 10px;
 }
-
 
 .navbar a {
-    font-size: 1rem;
-    color: white; 
-    font-weight: 500;
-    text-decoration: none;
-    margin-left: 20px;    
-
+  font-size: 1rem;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  margin-left: 20px;
 }
 
-.navbar svg{
-    color: whitesmoke; 
-
+.navbar svg {
+  color: whitesmoke;
 }
-
 
 /*User Container styles*/
 .usermaincontainer {
-    /* border: solid black;  */
-    /* background: whitesmoke; */
-    
+  /* border: solid black;  */
+  /* background: whitesmoke; */
 }
-.usermaincontainer h2{ 
-    margin: 10px 20px; 
-    color:  rgba(0, 145, 255, .69); 
-    font-weight: 300;
-
+.usermaincontainer h2 {
+  margin: 10px 20px;
+  color: rgba(0, 145, 255, 0.69);
+  font-weight: 300;
 }
-.buttoncontainer{
-    width: 100%;
-    /* text-align: right; */
-    margin-top: 20px;
+.buttoncontainer {
+  width: 100%;
+  /* text-align: right; */
+  margin-top: 20px;
 }
 
-.buttoncontainer button{
-    float: right;
-    padding: 10px;
-    margin-right: 20px;
-    background: rgba(0, 145, 255, 1);
-    color: white;
-    border: none;
-    border-radius: 5px;
-
-    
+.buttoncontainer button {
+  float: right;
+  padding: 10px;
+  margin-right: 20px;
+  background: rgba(0, 145, 255, 1);
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 
-.alldependents{
-    border: solid thin grey;
-    background-color: white;
-    display: flex;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-    align-items: center;
-    justify-content: flex-start;
-
+.alldependents {
+  border: solid thin grey;
+  background-color: white;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.dependentcomponent{
-    border: solid rgba(0, 145, 255, 0.69);
-    border-radius: 10px;
-    background:  rgba(0, 145, 255, 0.1); 
-    width: 325px;
-    height: 150px;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-around; */
-
+.dependentcomponent {
+  border: solid rgba(0, 145, 255, 0.69);
+  border-radius: 10px;
+  background: rgba(0, 145, 255, 0.1);
+  width: 400px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* justify-content: space-around; */
 }
 
 .dependentimgcontainer img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
 }
 
-.dependentname h3{
-    text-decoration: none;
+.dependentname h3 {
+  text-decoration: none;
 }
 
 .dependentinfocontainer {
-    padding: 10px;
-    margin-left: 20px;
+  padding: 10px;
+  margin-left: 20px;
 }
 
-.dependentinfocontainer li{
-    text-decoration: none;
-    list-style: none;
+.dependentinfocontainer li {
+  text-decoration: none;
+  list-style: none;
 }
-
 
 /*Add new form styling*/
-.addnewcomponent{
-    display: flex; 
-    justify-content: center;
-    align-items: center;
-    background-color: whitesmoke; 
-    padding: 50px;
- }
+.addnewcomponent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: whitesmoke;
+  padding: 50px;
+}
 
- .formwrapper{
-    width: 420px;
-    background: rgba(0, 145, 255, 0.1);
-    border: solid rgba(0, 145, 255, 0.69);
-    border-radius: 5px;
-    padding: 20px;
- }
+.formwrapper {
+  width: 420px;
+  background: rgba(0, 145, 255, 0.1);
+  border: solid rgba(0, 145, 255, 0.69);
+  border-radius: 5px;
+  padding: 20px;
+}
 
- .formwrapper h3{
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-align: center;
-    color: rgba(0, 145, 255, 0.8);
- }
+.formwrapper h3 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: center;
+  color: rgba(0, 145, 255, 0.8);
+}
 
- .formwrapper input {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    
- }
+.formwrapper input {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 
- .formwrapper select {
-    width: 100%;
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 10px;
+.formwrapper select {
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
 
- }
- 
- .formwrapper label {
-    margin-top: 20px;
-  }
+.formwrapper label {
+  margin-top: 20px;
+}
 
+.cancel {
+  float: right;
+  padding: 10px;
+  background: none;
+  color: rgba(0, 145, 255, 1);
+  border: solid rgba(0, 145, 255, 1);
+  border-radius: 5px;
+  min-width: 100px;
+  margin-right: 5px;
+}
 
-.cancel{
-float: right;
-padding: 10px;
-background: none;
-color: rgba(0, 145, 255, 1);
-border: solid rgba(0, 145, 255, 1);
-border-radius: 5px;
-min-width: 100px;
-margin-right: 5px;
-}   
-
-.submitnew{
-float: right;
-padding: 10px;
-background: rgba(0, 145, 255, 1);
-color: white;
-border: solid rgba(0, 145, 255, 1);
-border-radius: 5px;
-min-width: 100px;
-margin-left: 5px;
+.submitnew {
+  float: right;
+  padding: 10px;
+  background: rgba(0, 145, 255, 1);
+  color: white;
+  border: solid rgba(0, 145, 255, 1);
+  border-radius: 5px;
+  min-width: 100px;
+  margin-left: 5px;
 }
 
 /*activity log page*/
 
-.dependentpagecontainer{
-    background: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
+.dependentpagecontainer {
+  background: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
 }
 
-.newlogcontainer { 
-    /* margin-top: 20px; */
-    border: solid rgba(0, 145, 255, 0.69);
-    border-radius: 10px;
-    background:  rgba(0, 145, 255, 0.1); 
-    width: 700px; 
-    height: 150px;
-    padding: 20px;
-    margin: 20px;
-
+.newlogcontainer {
+  /* margin-top: 20px; */
+  border: solid rgba(0, 145, 255, 0.69);
+  border-radius: 10px;
+  background: rgba(0, 145, 255, 0.1);
+  width: 700px;
+  height: 150px;
+  padding: 20px;
+  margin: 20px;
 }
 
 .newlogcontainer h4 {
-    margin-bottom: 10px;
-    font-weight: bold;
-    text-align: left;
-    color: rgba(0, 145, 255, 0.8);
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-align: left;
+  color: rgba(0, 145, 255, 0.8);
 }
 
-.logforminputs select{
-    margin-right: 20px;
-    padding: 4px; 
-    border-radius: 5px;
-    width: 20%;
-    border: solid thin rgba(0, 145, 255, 0.8);
+.logforminputs select {
+  margin-right: 20px;
+  padding: 4px;
+  border-radius: 5px;
+  width: 20%;
+  border: solid thin rgba(0, 145, 255, 0.8);
 }
 
-.logforminputs input{
-    /* margin-right: 20px; */
-    width: 75%;
-    padding: 5px;
-    border-radius: 5px;
-    border: solid thin rgba(0, 145, 255, 0.8);
+.logforminputs input {
+  /* margin-right: 20px; */
+  width: 75%;
+  padding: 5px;
+  border-radius: 5px;
+  border: solid thin rgba(0, 145, 255, 0.8);
 }
 
 .newlogcontainer button {
-    float: right;
-    padding: 5px;
-    background: rgba(0, 145, 255, 1);
-    color: white;
-    border: solid rgba(0, 145, 255, 1);
-    border-radius: 5px;
-    min-width: 100px;
-    margin-right: 10px;
-    margin-top: 10px;
+  float: right;
+  padding: 5px;
+  background: rgba(0, 145, 255, 1);
+  color: white;
+  border: solid rgba(0, 145, 255, 1);
+  border-radius: 5px;
+  min-width: 100px;
+  margin-right: 10px;
+  margin-top: 10px;
 }
 
 /* individual activity logs style*/
 
 .logcomponent {
-    margin-top: 20px;
-    border: solid rgba(0, 145, 255, 0.1);
-    border-radius: 10px;
-    background: rgba(0, 145, 255, 0.69);
-    color: whitesmoke;
-    width: 700px; 
-    height: 100px;
-    padding: 20px;
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
+  margin-top: 20px;
+  border: solid rgba(0, 145, 255, 0.1);
+  border-radius: 10px;
+  background: rgba(0, 145, 255, 0.69);
+  color: whitesmoke;
+  width: 700px;
+  height: 100px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
 .notesIcon {
-    max-width: 50px;
-    max-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
 }
 
 .loginfo {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 90%;
-
-
-} 
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
 
 .activity {
-    border: solid thin whitesmoke;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-    width: 100px;
-    text-align: center;
-    background: rgba(0, 145, 255, 0.69);
-
-   
-} 
+  border: solid thin whitesmoke;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  background: rgba(0, 145, 255, 0.69);
+}
 
 .details {
-    border: solid thin whitesmoke;
-    border-radius: 10px;
-    margin: 5px;
-    padding: 10px;
-    width: 400px;
- 
+  border: solid thin whitesmoke;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px;
+  width: 400px;
 }
 
 .time {
-    width: 225px;
-    text-align: center;
-    border: solid thin whitesmoke;
-    border-radius: 10px;
-    padding: 10px 5px ;
-    background: rgba(0, 145, 255, 0.69);
-    margin: 5px;
-
+  width: 225px;
+  text-align: center;
+  border: solid thin whitesmoke;
+  border-radius: 10px;
+  padding: 10px 5px;
+  background: rgba(0, 145, 255, 0.69);
+  margin: 5px;
 }

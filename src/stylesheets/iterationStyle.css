@@ -85,12 +85,11 @@ div.react-calendar {
   width: auto;
   height: auto;
   /* margin-right: 20px; */
-  box-shadow: 0 0 1vw  rgb(0, 162, 255);
+  box-shadow: 0 0 1vw rgb(0, 162, 255);
   border-radius: 1vw;
   border-color: rgb(0, 162, 255);
   padding: 20px;
   margin: 20px;
-  
 }
 
 div.dependentpagecontainer {
@@ -98,4 +97,31 @@ div.dependentpagecontainer {
   flex-direction: row;
   align-items: start;
   justify-content: start;
+}
+
+.dependentcomponent button {
+  align-self: start;
+  justify-self: right;
+  background-color: rgb(239, 72, 72);
+  height: 1.5rem;
+  width: 1.5rem;
+  border: none;
+  border-radius: 100%;
+  font-weight: bold;
+  font-size: 1rem;
+  color: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.dependentcomponent button:hover {
+  box-shadow: 0 0 3px black;
+  border: 3px solid black;
+  color: black;
+}
+
+.dependent-leftside {
+  display: flex;
 }
