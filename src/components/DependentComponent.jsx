@@ -14,21 +14,19 @@ const DependentComponent = ({ traits }) => {
       'https://images.pexels.com/photos/13764529/pexels-photo-13764529.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     'Shih Tzu':
       'https://pawleaks.com/wp-content/uploads/2021/05/Shih-Tzu-Poodle-mix.jpg',
+    'Shiba Inu': 'images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg',
   };
 
   const { _id, name, age, breed, gender } = traits;
   console.log({ breed });
 
   return (
-
-    
-    <div className="dependentcomponent">
-      <div className="dependentimgcontainer">
-        {/* <img src="https://images.pexels.com/photos/1805164/pexels-photo-1805164.jpeg"></img> */}
+    <div className='dependentcomponent'>
+      <div className='dependentimgcontainer'>
         <img src={dogImages[breed]} style={{ objectFit: 'cover' }}></img>
       </div>
-      <div className="dependentinfocontainer">
-        <h3 className="dependentname">
+      <div className='dependentinfocontainer'>
+        <h3 className='dependentname'>
           <Link to={'/dependent/' + _id}>{name}</Link>
         </h3>
         <ul className='dependenttraits'>
@@ -38,7 +36,6 @@ const DependentComponent = ({ traits }) => {
         </ul>
       </div>
     </div>
- 
   );
 };
 

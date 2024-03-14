@@ -27,13 +27,13 @@ const UserProfileContainer = ({ currentUserId }) => {
 
   return (
     <div className='usermaincontainer'>
-      <h2>Dependents you are tracking</h2>
+      <h2>Pets you are tracking</h2>
 
       <div className='alldependents'>{dependents}</div>
       <div className='buttoncontainer'>
         {/* <button>Add Existing Dependent</button> */}
         <Link to='/addnew'>
-          <button>Add New Dependent</button>
+          <button>Add New Pet</button>
         </Link>
       </div>
     </div>

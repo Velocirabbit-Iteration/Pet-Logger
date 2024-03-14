@@ -49,18 +49,14 @@ const DependentContainer = (props) => {
   }
 
   return (
-    <div className="calendarExterior">
-      <div className="dependentpagecontainer">
-        {/* <DependentComponent
-          traits={{        }} 
-        ></DependentComponent> */}
-        <NewLogComponent
-          // resetPage = {setreset}
-          id={id}
-        ></NewLogComponent>
-        {logActivities}
+    <div className='calendarExterior'>
+      <div className='dependentpagecontainer'>
+        <div className='newLogAndActivitiesContainer'>
+          <NewLogComponent id={id}></NewLogComponent>
+          {logActivities}
+        </div>
+        <CalendarComponent dates={dates} />
       </div>
-      <CalendarComponent dates={dates} />
     </div>
   );
 };

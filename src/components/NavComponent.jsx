@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import SettingIcon from './SettingIcon';
 import HelpIcon from './HelpIcon';
@@ -7,6 +7,18 @@ import DogIcon from './DogIcon';
 const NavComponent = ({ currentUserId }) => {
   // const nameArray = ['Adeeb', 'Lillian', 'Howard', 'Emma', 'Marselena'];
   // const selectedName = nameArray[Math.round(Math.random() * 5)];
+
+  // function handleLogout (event) => {
+
+  // };
+  useEffect (() => {
+    function checkSession () {
+      if (currentUserId) {
+        return 'Log Out';
+      };
+    }
+  });
+  
 
   return (
     <div className='navheader'>
@@ -21,7 +33,8 @@ const NavComponent = ({ currentUserId }) => {
           {/* <img src='https://media.istockphoto.com/id/1386479313/photo/happy-millennial-afro-american-business-woman-posing-isolated-on-white.jpg?s=612x612&w=0&k=20&c=8ssXDNTp1XAPan8Bg6mJRwG7EXHshFO5o0v9SIj96nY='></img> */}
           <span>{sessionStorage.getItem('name') || null}</span>
         </div>
-        <a href='/'>Login</a>
+        <a href='/'>Home</a>
+        {/* <a href='/' onclick={(e) => handleLogout(e)}>{checkSession}</a> */}
         <a>
           <HelpIcon />
         </a>

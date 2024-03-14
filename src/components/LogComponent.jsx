@@ -25,13 +25,11 @@ const LogComponent = ({ logs }) => {
   return (
     <div className="logcomponent">
       <img className="notesIcon" src="https://www.computerhope.com/jargon/n/notes.png"></img>
-      {/* <h3 className="logname">Oil Rig Placeholder</h3> */}
       <div className="loginfo">
         <span className="activity">{postType}</span>
         <span className="details">{details}</span>
         <span className="time">{`${newDate} at ${newTime}${timeOfDay}`}</span>
       </div>
-      
     </div>
   );
 };

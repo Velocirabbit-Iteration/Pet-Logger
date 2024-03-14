@@ -69,7 +69,7 @@ const AddNewComponent = ({ currentUserId }) => {
     <div className='addnewcomponent'>
       <div className='formwrapper'>
         <form>
-          <h3 className='newdependentname'>Add new dependent</h3>
+          <h3 className='newdependentname'>Add new pet</h3>
           <label htmlFor='name'>Name</label>
           <input
             type='text'
