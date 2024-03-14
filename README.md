@@ -47,7 +47,7 @@ npm start
 
 [#gobin-shark-scratch-project slack channel](https://codesmithecri46.slack.com/archives/C06N9RH4L87)
 
-[Iteration Project Brief] (https://docs.google.com/document/d/18PJVy5rqm_WkpULniAe3l4CnA7rD-iY7/edit)
+[Iteration Project Brief](https://docs.google.com/document/d/18PJVy5rqm_WkpULniAe3l4CnA7rD-iY7/edit)
 
 ### Routes
 
