@@ -1,4 +1,5 @@
 import React from 'react';
+import cors from 'cors';
 import { Link } from 'react-router-dom';
 // import DependentContainer from './DependentContainer';
 
@@ -18,7 +19,25 @@ const DependentComponent = ({ traits }) => {
   };
 
   const { _id, name, age, breed, gender } = traits;
-  console.log({ breed });
+
+  const removePet = async () => {
+    if (
+      window.confirm(
+        "Are you sure you want to delete this dog? He's a good boy :("
+      )
+    ) {
+      try {
+        await fetch('http://localhost:3000/api/dog', {
+          method: 'DELETE',
+          mode: 'cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ _id }),
+        });
+      } catch (error) {
+        console.log(error);
+      }
+    }
+  };
 
   return (
     <div className='dependentcomponent'>
@@ -37,7 +56,7 @@ const DependentComponent = ({ traits }) => {
           </ul>
         </div>
       </div>
-      <button>&#10005;</button>
+      <button onClick={() => removePet()}>&#10005;</button>
     </div>
   );
 };

@@ -21,6 +21,10 @@ router.post('/dog', petLoggerController.addDog, (req, res) => {
   res.status(200).json(res.locals.newDog);
 });
 
+router.delete('/dog', petLoggerController.deleteDog, (req, res) => {
+  res.status(200).send();
+});
+
 // get a user's dogs
 // METHOD: GET
 // Endpoint: localhost:3000/api/dog/:user

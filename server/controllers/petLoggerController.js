@@ -84,6 +84,18 @@ petLoggerController.addDog = async (req, res, next) => {
   }
 };
 
+petLoggerController.deleteDog = async (req, res, next) => {
+  const { _id } = req.body;
+  try {
+    const deleted = await model.Dog.findByIdAndDelete({ _id });
+    console.log('deleted', deleted);
+    return next();
+  } catch (error) {
+    console.log('error in deleteDog');
+    return next(error);
+  }
+};
+
 // POST: middleware for adding a new user
 petLoggerController.addUser = async (req, res, next) => {
   try {
