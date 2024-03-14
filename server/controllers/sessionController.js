@@ -1,4 +1,5 @@
 const Session = require('../models/sessionModel');
+const { User } = require('../models/petLoggerModels');
 
 const sessionController = {};
 
@@ -14,9 +15,13 @@ sessionController.isLoggedIn = async (req, res, next) => {
     const session = await Session.findOne({ cookieId: ssid });
 
     if (session) {
-      res.locals.sessionBoolean = true;
+      const userInfo = await User.findById('65f1239d5b5605e44bac99bd');
+      const { name } = userInfo;
+      res.locals.name = name;
       res.locals.userSessionId = ssid;
       res.locals.status = 200;
+      res.locals.sessionBoolean = true;
+      console.log(res.locals);
       return next();
     } else {
       res.locals.sessionBoolean = false;
