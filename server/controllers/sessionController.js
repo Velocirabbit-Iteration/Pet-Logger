@@ -15,7 +15,7 @@ sessionController.isLoggedIn = async (req, res, next) => {
     const session = await Session.findOne({ cookieId: ssid });
 
     if (session) {
-      const userInfo = await User.findById('65f1239d5b5605e44bac99bd');
+      const userInfo = await User.findById(ssid);
       const { name } = userInfo;
       res.locals.name = name;
       res.locals.userSessionId = ssid;
