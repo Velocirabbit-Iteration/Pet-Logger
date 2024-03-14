@@ -14,7 +14,9 @@ const App = () => {
   //   '65ecbe30d6da6de8222431e2'
   // );
 
-  const [currentUserId, setCurrentUserId] = useState(null);
+  const [currentUserId, setCurrentUserId] = useState(
+    sessionStorage.getItem('currentUserId') || null
+  );
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,7 +29,6 @@ const App = () => {
       fetch('/auth/session')
         .then((response) => response.json())
         .then((data) => {
-          console.log('Response data from server', data);
           if (data.userLoggedIn) {
             setCurrentUserId(data._id);
             sessionStorage.setItem('currentUserId', data._id);
