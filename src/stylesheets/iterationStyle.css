@@ -82,11 +82,20 @@ button:active {
 }
 
 div.react-calendar {
-  width: 100%;
+  width: auto;
   height: auto;
+  /* margin-right: 20px; */
+  box-shadow: 0 0 1vw  rgb(0, 162, 255);
+  border-radius: 1vw;
+  border-color: rgb(0, 162, 255);
+  padding: 20px;
+  margin: 20px;
+  
 }
 
 div.dependentpagecontainer {
   display: flex;
   flex-direction: row;
+  align-items: start;
+  justify-content: start;
 }

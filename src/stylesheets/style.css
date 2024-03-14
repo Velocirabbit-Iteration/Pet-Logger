@@ -233,11 +233,10 @@ margin-left: 5px;
     display: flex;
     flex-direction: column;
     align-items: baseline;
-
 }
 
 .newlogcontainer { 
-    margin-top: 20px;
+    /* margin-top: 20px; */
     border: solid rgba(0, 145, 255, 0.69);
     border-radius: 10px;
     background:  rgba(0, 145, 255, 0.1); 

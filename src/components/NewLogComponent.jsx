@@ -1,6 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const useInput = (init) => {
   const [value, setValue] = useState(init);
@@ -11,8 +11,8 @@ const useInput = (init) => {
 };
 
 const NewLogComponent = (props) => {
-  const [postType, postTypeOnChange] = useInput("");
-  const [details, detailsOnChange] = useInput("");
+  const [postType, postTypeOnChange] = useInput('');
+  const [details, detailsOnChange] = useInput('');
 
   const saveLog = (id) => {
     // NEED TO DO FEILD INPUT VALIDATION
@@ -21,54 +21,52 @@ const NewLogComponent = (props) => {
       postType,
       details,
     };
-    fetch("/api/post", {
-      method: "POST",
+    fetch('/api/post', {
+      method: 'POST',
       headers: {
-        "Content-Type": "Application/JSON",
+        'Content-Type': 'Application/JSON',
       },
       body: JSON.stringify(body),
     })
       .then((resp) => resp.json())
       .then((data) => {
-        console.log("request body", data);
+        console.log('request body', data);
         window.location.reload();
       })
-      .catch((err) => console.log(" add log fetch: ERROR: ", err));
+      .catch((err) => console.log(' add log fetch: ERROR: ', err));
   };
 
   return (
-    <div className="newlogcontainer">
+    <div className='newlogcontainer'>
       <h4>Log new activity</h4>
-      <form className="newlogform"></form>
+      <form className='newlogform'></form>
       <form>
-        <div className="logforminputs">
-      <select
-          id="postType"
-          name="postType"
-          value={postType}
-          onChange={postTypeOnChange}
-        >
-          <option value="blank">Select Activity</option>
-          <option value="Food">Food</option>
-          <option value="Medicine">Medicine</option>
-          <option value="Potty">Potty</option>
-          <option value="Nap">Nap</option>
-          <option value="Exercise">Exercise</option>
-          <option value="Treats">Treats</option>
-        </select>
-        <input
-          name="details"
-          placeholder="Add Activity Details"
-          value={details}
-          onChange={detailsOnChange}
-        ></input>
+        <div className='logforminputs'>
+          <select
+            id='postType'
+            name='postType'
+            value={postType}
+            onChange={postTypeOnChange}
+          >
+            <option value='blank'>Select Activity</option>
+            <option value='Food'>Food</option>
+            <option value='Medicine'>Medicine</option>
+            <option value='Potty'>Potty</option>
+            <option value='Nap'>Nap</option>
+            <option value='Exercise'>Exercise</option>
+            <option value='Treats'>Treats</option>
+          </select>
+          <input
+            name='details'
+            placeholder='Add Activity Details'
+            value={details}
+            onChange={detailsOnChange}
+          ></input>
         </div>
-        
-        
-        <button type="button" onClick={() => saveLog(props.id)}>
+
+        <button type='button' onClick={() => saveLog(props.id)}>
           Submit
         </button>
-  
       </form>
     </div>
   );
