@@ -31,7 +31,7 @@ const App = () => {
         .then((response) => response.json())
         .then((data) => {
           if (data.userLoggedIn) {
-            console.log('Hi', data.name);
+            // console.log('Hi', data.name);
             setCurrentUserId(data._id);
             sessionStorage.setItem('currentUserId', data._id);
             sessionStorage.setItem('name', data.name);

@@ -49,7 +49,7 @@ const AddNewComponent = ({ currentUserId }) => {
       gender,
       users: [currentUserId],
     };
-    console.log('req.body', body);
+    // console.log('req.body', body);
 
     fetch('http://192.168.0.226:3000/api/dog', {
       method: 'POST',
