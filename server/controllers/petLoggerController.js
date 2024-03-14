@@ -25,11 +25,11 @@ const petLoggerController = {};
 petLoggerController.getDogs = async (req, res, next) => {
   try {
     //retrieve the userId from req.params
-    console.log('req params', req.params);
+    // console.log('req params', req.params);
     const userId = req.params.user;
     //get all the dogs from the database
     const dogs = await model.Dog.find({});
-    console.log({ dogs });
+    // console.log({ dogs });
     // for each dog returned, check if the usersarray contained the userId
     const matchingDogs = dogs.filter((dog) => dog.users.includes(userId));
     res.locals.matchingDogs = matchingDogs;

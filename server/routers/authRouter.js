@@ -27,9 +27,10 @@ router.post(
 );
 
 router.get('/session', sessionController.isLoggedIn, (req, res) => {
-  res
-    .status(res.locals.status)
-    .json({ userLoggedIn: res.locals.sessionBoolean });
+  res.status(res.locals.status).json({
+    userLoggedIn: res.locals.sessionBoolean,
+    _id: res.locals.userSessionId,
+  });
 });
 
 module.exports = router;
