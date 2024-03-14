@@ -10,31 +10,38 @@ import LoginComponent from './components/LoginComponent';
 import { useState } from 'react';
 
 const App = () => {
-  const [currentUserId, setCurrentUserId] = useState(
-    '65ecbe30d6da6de8222431e2'
-  );
+  // const [currentUserId, setCurrentUserId] = useState(
+  //   '65ecbe30d6da6de8222431e2'
+  // );
 
-  // const [currentUserId, setCurrentUserId] = useState('');
+  const [currentUserId, setCurrentUserId] = useState(null);
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   fetch('/auth/session')
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       console.log('Response data from server', data);
-  //       if (!data.userLoggedIn) {
-  //         console.log('This is data', data.userLoggedIn);
-  //         navigate('/');
-  //       } else {
-  //         setCurrentUserId(data._id);
-  //         navigate('/user');
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.error('Error checking session:', error);
-  //       navigate('/');
-  //     });
-  // }, [navigate]);
+  useEffect(() => {
+    const storedUserId = sessionStorage.getItem('currentUserId');
+
+    if (storedUserId) {
+      setCurrentUserId(storedUserId);
+      navigate('/user');
+    } else {
+      fetch('/auth/session')
+        .then((response) => response.json())
+        .then((data) => {
+          console.log('Response data from server', data);
+          if (data.userLoggedIn) {
+            setCurrentUserId(data._id);
+            sessionStorage.setItem('currentUserId', data._id);
+            navigate('/user');
+          } else {
+            navigate('/');
+          }
+        })
+        .catch((error) => {
+          console.error('Error checking session:', error);
+          navigate('/');
+        });
+    }
+  }, [navigate]);
 
   return (
     <div>
