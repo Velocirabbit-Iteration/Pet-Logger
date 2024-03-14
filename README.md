@@ -8,6 +8,13 @@ Keep track of your pets and their activities!
 - Bongi Sibanda - [trialnerr](https://github.com/trialnerr)
 - Evan Griffith - [EvanCG](https://github.com/EvanCG)
 
+## Iteration Project Team
+- Marselena Romero - [marsbird](https://github.com/marsbird)
+- Howard Sun - [howardCodeGit](https://github.com/howardCodeGit)
+- Lillian Tenn - [tenn501](https://github.com/tenn501)
+- Adeeb Bayat - [adeebbayat](https://github.com/adeebbayat)
+- Emma Ijiogbe - [emmagawd](https://github.com/emmagawd)
+
 ## Installation
 
 Clone repo (`dev` = development, `main` = production)
