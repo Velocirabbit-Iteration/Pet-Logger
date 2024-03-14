@@ -17,6 +17,7 @@ const App = () => {
   const [currentUserId, setCurrentUserId] = useState(
     sessionStorage.getItem('currentUserId') || null
   );
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,7 +45,7 @@ const App = () => {
           navigate('/');
         });
     }
-  }, [navigate]);
+  }, []);
 
   return (
     <div>
