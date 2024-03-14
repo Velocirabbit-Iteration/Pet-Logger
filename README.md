@@ -8,6 +8,13 @@ Keep track of your pets and their activities!
 - Bongi Sibanda - [trialnerr](https://github.com/trialnerr)
 - Evan Griffith - [EvanCG](https://github.com/EvanCG)
 
+## Iteration Project Team:
+- Adeeb Bayat - [adeebbayat](https://github.com/adeebbayat)
+- Emma Ijiogbe - [emmagawd](https://github.com/emmagawd)
+- Marselena Romero - [marsbird](https://github.com/marsbird)
+- Howard Sun - [howardCodeGit](https://github.com/howardCodeGit)
+- Lillian Tenn - [tenn501](https://github.com/tenn501)
+
 ## Installation
 
 Clone repo (`dev` = development, `main` = production)
@@ -39,6 +46,8 @@ npm start
 [Scrum Board](https://team-omydjgcen49r.atlassian.net/jira/software/projects/GGS/boards/1).
 
 [#gobin-shark-scratch-project slack channel](https://codesmithecri46.slack.com/archives/C06N9RH4L87)
+
+[Iteration Project Brief] (https://docs.google.com/document/d/18PJVy5rqm_WkpULniAe3l4CnA7rD-iY7/edit)
 
 ### Routes
 
